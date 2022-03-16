@@ -1,0 +1,17 @@
+.block{
+    height: 400px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-overflow: clip;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.block{
+    background-color: rgb(108, 187, 112);
+}

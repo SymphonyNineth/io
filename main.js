@@ -1,14 +1,20 @@
 import type from "./type.js";
 import text from "./text.js";
-// const observer = new IntersectionObserver(entries => {
-//     console.log(entries)
-// });
+const observer = new IntersectionObserver(entries => {
 
-const blocks = Array.from(document.querySelector("#container").children);
+    entries.forEach(entry => {
+        console.log(entry.intersectionRatio);
+            
+                if(entry.isIntersecting){
+                    entry.target.style.backgroundColor = "Salmon"
+                    type(entry.target, text, 200, 1,);
+                    observer.unobserve(entry.target);
+                }
+    })
+}, {
+    threshold: 0.5
+});
 
-// blocks.forEach(block => {
-//     observer.observe(block)
-// });
+const blocks = document.querySelectorAll(".block");
 
-
-type(blocks[0], text, 200, 1, Number.MAX_SAFE_INTEGER);
+blocks.forEach(block => observer.observe(block));

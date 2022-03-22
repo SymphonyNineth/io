@@ -10,8 +10,5 @@
     text-overflow: clip;
     overflow: hidden;
     padding: 30px;
-}
-
-.block{
     background-color: rgb(108, 187, 112);
 }
